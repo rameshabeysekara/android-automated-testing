@@ -3,12 +3,12 @@ package jlin2.examples.localtesting
 import org.junit.Assert.*
 import org.junit.Test
 
-class EmailValiadatorTest {
+class EmailValidatorTest {
 
     @Test
     fun validEmailFormatTest() {
         assertTrue(EmailValidator.isValidEmail("123@abc.com"))
-
+        assertTrue(EmailValidator.isValidEmail("123@abc.co.ca"))
     }
 
 }
