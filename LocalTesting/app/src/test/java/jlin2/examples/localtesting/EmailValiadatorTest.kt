@@ -11,4 +11,10 @@ class EmailValidatorTest {
         assertTrue(EmailValidator.isValidEmail("123@abc.co.ca"))
     }
 
+    @Test
+    fun invalidEmailFormatTest() {
+        assertFalse(EmailValidator.isValidEmail("123@abc")) // Incorrect domain
+        assertFalse(EmailValidator.isValidEmail("123@abc..com")) // Double dots
+        
+    }
 }
