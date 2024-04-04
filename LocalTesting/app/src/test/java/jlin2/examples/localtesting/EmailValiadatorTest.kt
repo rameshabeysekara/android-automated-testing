@@ -18,5 +18,6 @@ class EmailValidatorTest {
         assertFalse(EmailValidator.isValidEmail("@abc.com")) // No username
         assertFalse(EmailValidator.isValidEmail("testing123")) // No domain
         assertFalse(EmailValidator.isValidEmail("")) // Empty string
+        assertFalse(EmailValidator.isValidEmail(null)) // Null
     }
 }
