@@ -68,6 +68,12 @@ public class MainActivityTest {
         onView(isRoot()).perform(ViewActions.pressBack());
         clearTextInEditText();
 
+        // Enter "abcdef" and press Change Text button, and test the string
+        onView(withId(R.id.editTextUserInput)).perform(typeText("abcdef"), closeSoftKeyboard());
+        onView(withId(R.id.changeTextBt)).perform(click());
+        onView(withId(R.id.textToBeChanged)).check(matches(withText("abcdef")));
+        clearTextInEditText();
+
         
     }
 }
