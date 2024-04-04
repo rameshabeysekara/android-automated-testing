@@ -16,6 +16,7 @@ class EmailValidatorTest {
         assertFalse(EmailValidator.isValidEmail("123@abc")) // Incorrect domain
         assertFalse(EmailValidator.isValidEmail("123@abc..com")) // Double dots
         assertFalse(EmailValidator.isValidEmail("@abc.com")) // No username
-        
+        assertFalse(EmailValidator.isValidEmail("testing123")) // No domain
+       
     }
 }
