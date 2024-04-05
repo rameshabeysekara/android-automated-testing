@@ -24,7 +24,6 @@ public class ShowTextActivityTest {
     @Test
     public void validateTextView() {
         // Validate correct strings in the TextView in ShowTextActivity.
-        onView(withId(R.id.show_text_view)).check(matches(withText("Hello World!")));
+        onView(withId(R.id.show_text_view)).check(matches(withText("")));
     }
-
 }

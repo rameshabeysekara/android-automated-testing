@@ -1,12 +1,10 @@
 package com.example.android.testing.espresso.BasicSample;
 
 import androidx.test.espresso.action.ViewActions;
-import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -80,7 +78,5 @@ public class MainActivityTest {
         onView(withId(R.id.show_text_view)).check(matches(withText("abcdef")));
         onView(isRoot()).perform(ViewActions.pressBack());
         clearTextInEditText();
-
-        
     }
 }
